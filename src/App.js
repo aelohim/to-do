@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { TodoList } from './components/TodoList';
+import { TodoAdd } from './components/TodoAdd'; 
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="card-to-do">
+        <h1> Lista de Tareas </h1>
+        
+        <div className='counter-todos'>
+          <h3> Numero de Realizadas: 3</h3>
+          <h3> Numero de Pendientes: 3</h3>
+        </div>
+
+        <div className='add-todo'>
+          <h3>Agregar Tarea</h3>
+          <TodoAdd></TodoAdd>
+        </div>
+      </div>
+      <TodoList></TodoList>
     </div>
   );
 }
